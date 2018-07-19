@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\begin{document}
+	Intuitively, we know that m$_2$ will move to the right after the collision, as the only impulse it experiences in the collision is to the right.
+	
+	Start with momentum conservation
+\begin{equation}
+	m_i v_i = m_f v_f
+\end{equation}
+
+\begin{equation}
+	m_1 v_{1,i} = m_1 v_{1,f} + m_2 v_{2,f}
+\end{equation}
+
+and energy conservation
+
+\begin{equation}
+	\frac{1}{2} m_i v_i^2 = \frac{1}{2} m_f v_f^2
+\end{equation}
+
+\begin{equation}
+	\frac{1}{2} m_1 v_{1,i}^2 = \frac{1}{2} m_1 v_{1,f}^2 + \frac{1}{2} m_2 v_{2,f}^2
+\end{equation}
+
+Now we sill solve the momentum equation for v$_{1,i}$ and the energy equation for v$_{1,i}^2$. Then we will have an expression just of v$_{1,f}$ and v$_{2,f}$.
+
+\begin{equation}
+	v_{1,i} = v_{1,f} + \frac{m_2}{m_1} v_{2,f}
+	\label{momentum}
+\end{equation}
+
+\begin{equation}
+	v_{1,i}^2 = v_{1,f}^2 + \frac{m_2}{m_1} v_{2,f}^2
+	\label{energy}
+\end{equation}
+
+Now use the result from $\ref{momentum}$ and plug that into $\ref{energy}$.
+
+\begin{equation}
+	v_{1,f}^2 + 2 \frac{m_2}{m_1} v_{1,f} v_{2,f} + \left( \frac{m_2}{m_1} \right)^2 v_{2,f}^2 = v_{1,f}^2 + \frac{m_2}{m_1} v_{2,f}^2
+\end{equation}
+
+Notice that $v_{1,f}^2$ can be subtracted from both sides. If we divide both sides by $2 \frac{m_2}{m_1} v_{2,f}$ we get
+
+\begin{equation}
+	v_{1,f} = \frac{1}{2} \left( 1 - \frac{m_2}{m_1} \right) v_{2,f}
+	\label{v1f}
+\end{equation}
+
+From the problem setup, we know that object 2 will be moving right after the collision. By our defined coordinates, this means that $v_{2,f} > 0$. Now we can find the direction object 1 moves after the collision.
+
+\begin{itemize}
+	\item If $m_2 > m_1$, then $v_{1,f} < 0$ so object 1 will move left.
+	\item If $m_2 < m_1$, then $v_{1,f} > 0$ so object 1 will move right.
+	\item If $m_2 = m_1$, then $v_{1,f} = 0$ so object 1 will be stationary after the collision.
+\end{itemize}
+
+Now that we have the direction that object 1 moves after the collision, let's figure out the speed that object 2 moves after the collision. To do this, we will plug the RHS of equation $\ref{v1f}$ into equation $\ref{momentum}$.
+
+\begin{equation}
+	v_{1,i} = \frac{1}{2} \left( 1 - \frac{m_2}{m_1} \right) v_{2,f} + \frac{m_2}{m_1} v_{2,f}
+\end{equation}
+
+\begin{equation}
+	v_{1,i} = \frac{1}{2} \left( 1 + \frac{m_2}{m_1} \right) v_{2,f}
+\end{equation}
+
+\begin{equation}
+	v_{2,f} = \frac{2}{1 + \frac{m_2}{m_1}} \, v_{1,i}
+\end{equation}
+
+Now we can use the relationship between $m_1$ and $m_2$ to find how $v_{2,f}$ compares to $v_{1,i}$
+
+\begin{itemize}
+	\item If $m_2 > m_1$, then $v_{2,f} < v{1,i}$.
+	\item If $m_2 < m_1$, then $v_{2,f} > v{1,i}$.
+	\item if $m_2 = m_1$, then $v_{2,f} = v{1,i}$.
+\end{itemize}
+
+\end{document}
